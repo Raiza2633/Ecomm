@@ -24,7 +24,7 @@ const AppProvider = ({ children }) => {
         dispatch({ type: "SET_LOADING" });
         try {
             const res = await axios.get(url);
-            // console.log(res.data)
+            console.log(res.data, 'api data')
             const products = await res.data;
             dispatch({ type: "SET_API_DATA", payload: products });
 
